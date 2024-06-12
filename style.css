@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Nothing';
-    src: url('nothing-font-webfont.woff2') format('woff2'),
-        url('nothing-font-webfont.woff') format('woff');
+    src: url('../pestopasta74.com/nothing-font-webfont.woff2') format('woff2'),
+        url('../pestopasta74.com/nothing-font-webfont.woff') format('woff');
 }
 
 body {
