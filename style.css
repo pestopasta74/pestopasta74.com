@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Nothing';
-    src: url('assets/nothing-font.otf') format('opentype');
+    src: url('../SubSkipper/assets/nothing-font.otf') format('opentype');
 }
 
 body {
