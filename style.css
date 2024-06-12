@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'Nothing';
-    src: url('../pestopasta74.com/nothing-font-webfont.woff2') format('woff2'),
-        url('../pestopasta74.com/nothing-font-webfont.woff') format('woff');
+    src: url('fonts/Ndot-55.otf') format('opentype');
 }
 
 body {
@@ -56,5 +55,5 @@ body {
     text-align: center;
     font-family: 'Nothing', 'Kode Mono', monospace;
     letter-spacing: 2px;
-    font-size: 10px;
+    font-size: 18px;
 }
