@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Nothing';
-    src: url('assets/nothing-font.otf') format('truetype');
+    src: url('assets/nothing-font.otf') format('opentype');
 }
 
 body {
