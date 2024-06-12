@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'Nothing';
-    src: url('../SubSkipper/nothing-font.otf') format('opentype');
+    src: url('nothing-font-webfont.woff2') format('woff2'),
+        url('nothing-font-webfont.woff') format('woff');
 }
 
 body {
@@ -55,5 +56,5 @@ body {
     text-align: center;
     font-family: 'Nothing', 'Kode Mono', monospace;
     letter-spacing: 2px;
-    font-size: 15px;
+    font-size: 10px;
 }
