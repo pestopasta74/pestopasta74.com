@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Preston Whiteman - Developer, Designer, Creator">
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Projects | Preston Whiteman</title>
+</head>
+<body>
+    <canvas id="cyberpunkCanvas"></canvas>
+    
+    <div class="container">
+        <header>
+            <!-- Same header as index.html -->
+        </header>
+        
+        <nav class="nav-container">
+            <!-- Same navigation as index.html -->
+        </nav>
+        
+        <div class="page-header">
+            <h2 class="glitch-text" data-text="Projects">Projects</h2>
+            <div class="header-line"></div>
+        </div>
+        
+        <div class="project-filters">
+            <button class="cyber-button active" data-filter="all">All</button>
+            <button class="cyber-button" data-filter="physics">Physics</button>
+            <button class="cyber-button" data-filter="web">Web</button>
+            <button class="cyber-button" data-filter="simulation">Simulation</button>
+        </div>
+        
+        <div class="project-grid">
+            <!-- Project Card 1 -->
+            <div class="cyber-card project-card" data-category="physics">
+                <div class="project-image">
+                    <img src="assets/project-physics-quiz.jpg" alt="Physics Quiz">
+                    <div class="image-overlay">
+                        <span class="project-category">Physics</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Physics Quiz & Simulator</h3>
+                    <p>An educational tool for physics students with interactive simulations.</p>
+                    <div class="project-tech">
+                        <span>JavaScript</span>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="cyber-link">View Project</a>
+                        <a href="#" class="cyber-link">Source Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Card 2 -->
+            <div class="cyber-card project-card" data-category="simulation">
+                <div class="project-image">
+                    <img src="assets/project-planet.jpg" alt="Planet Simulation">
+                    <div class="image-overlay">
+                        <span class="project-category">Simulation</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Planet Simulation</h3>
+                    <p>A physics-based planetary motion simulator with accurate orbital mechanics.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Matplotlib</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="cyber-link">View Project</a>
+                        <a href="#" class="cyber-link">Source Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Project Cards -->
+        </div>
+    </div>
+    
+    <div class="footer">
+        <!-- Same footer as index.html -->
+    </div>
+    
+    <script src="script.js"></script>
+    <!-- Additional project filtering script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.project-filters button');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    const filter = button.getAttribute('data-filter');
+                    
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

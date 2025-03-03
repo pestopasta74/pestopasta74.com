@@ -3,24 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Preston's personal website (epic!)">
-    <title>pestopasta74</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="assets/saturn.png">
+    <meta name="description" content="Preston Whiteman - Developer, Designer, Creator">
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Preston Whiteman | @pestopasta74</title>
 </head>
 <body>
-    <header>
-        <div class="centred">
-            <img src="assets/saturn.svg" alt="Saturn Logo" class="saturn">
-            <h1>Preston</h1>
-            <h2>@pestopasta74</h2>
-        </div>
-    </header>
-
-    <div class = "footer">
-            <p>pestopasta74.com | V:1.0.7</p>
+    <canvas id="liquidCanvas"></canvas>
+    
+    <div class="container">
+        <header>
+            <div class="profile-card">
+                <div class="name-container">
+                    <h1>Preston Whiteman <span class="divider">/</span> <span class="username">@pestopasta74</span></h1>
+                </div>
+            </div>
+        </header>
+        
+        <nav class="nav-container">
+            <button class="nav-toggle" onclick="toggleMenu()">
+                <img src="assets/saturn.png" alt="Menu">
+            </button>
+            <div class="menu" id="menu">
+                <a href="index.html"><i class="ph-bold ph-house"></i>Home</a>
+                <a href="about.html"><i class="ph-bold ph-user"></i>About</a>
+                <a href="projects.html"><i class="ph-bold ph-code"></i>Projects</a>
+                <a href="notes.html"><i class="ph-bold ph-note-pencil"></i>Notes</a>
+                <a href="CV.html"><i class="ph-bold ph-file-text"></i>CV</a>
+            </div>
+        </nav>
+        
+        <main class="content-section">
+            <h2>Welcome to my digital space</h2>
+            <p>This is where I share my projects, thoughts, and experiences. Feel free to explore!</p>
+            
+            <section id="about-me">
+                <h3>About Me</h3>
+                <p>I'm Preston, a developer and tech enthusiast with a passion for problem-solving and creativity.</p>
+            </section>
+            
+            <section id="featured-projects">
+                <h3>Featured Projects</h3>
+                <ul>
+                    <li><strong>Physics Quiz & Simulator</strong> - An educational tool for physics students.</li>
+                    <li><strong>Planet Simulation</strong> - A physics-based planetary motion simulator.</li>
+                </ul>
+            </section>
+            
+            <section id="tech-stack">
+                <h3>Tech Stack</h3>
+                <p>Python | JavaScript | HTML/CSS | C++ | MATLAB</p>
+            </section>
+        </main>
     </div>
-
+    
+    <div class="footer">
+        <p>pestopasta74.com</p>
+        <span class="version">V:1.1.1</span>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
