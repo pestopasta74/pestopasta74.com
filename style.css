@@ -100,6 +100,25 @@
     text-decoration: none;
   }
 
+  /* Specificity hack to override any other styles */
+  /* This is a workaround for some browsers that may not respect the !important rule i.e Instagram */
+  .navbar .logo {
+    color: white !important;
+    text-decoration: none !important;
+    -webkit-text-fill-color: white !important;
+  }
+
+  /* Target all possible link states with maximum specificity */
+  .navbar a.logo:link,
+  .navbar a.logo:visited,
+  .navbar a.logo:hover,
+  .navbar a.logo:active,
+  .navbar a.logo:focus {
+    color: white !important;
+    text-decoration: none !important;
+    -webkit-text-fill-color: white !important;
+  }
+
   .nav-links {
     list-style: none;
     display: flex;
