@@ -95,6 +95,11 @@
     font-weight: bold;
   }
 
+  .logo, .logo:visited, .logo:hover, .logo:active {
+    color: white;
+    text-decoration: none;
+  }
+
   .nav-links {
     list-style: none;
     display: flex;
