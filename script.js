@@ -2,7 +2,7 @@
 document.getElementById("hamburger").addEventListener("click", () => {
     document.getElementById("nav-links").classList.toggle("active");
   });
-  
+
   // Close mobile menu when clicking a link
   document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", () => {
@@ -11,7 +11,7 @@ document.getElementById("hamburger").addEventListener("click", () => {
       }
     });
   });
-  
+
   // Project filtering functionality
   document.addEventListener("DOMContentLoaded", function() {
     const filterButtons = document.querySelectorAll(".filter-btn");
@@ -20,12 +20,12 @@ document.getElementById("hamburger").addEventListener("click", () => {
         button.addEventListener("click", () => {
           // Remove active class from all buttons
           filterButtons.forEach(btn => btn.classList.remove("active"));
-          
+
           // Add active class to clicked button
           button.classList.add("active");
-          
+
           const filter = button.getAttribute("data-filter");
-          
+
           // Show/hide project items based on filter
           const projectItems = document.querySelectorAll(".project-item");
           projectItems.forEach(item => {
@@ -45,15 +45,15 @@ document.getElementById("hamburger").addEventListener("click", () => {
       });
     }
   });
-  
+
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
-      
+
       const targetId = this.getAttribute('href');
       if (targetId === "#") return;
-      
+
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         window.scrollTo({
@@ -63,7 +63,7 @@ document.getElementById("hamburger").addEventListener("click", () => {
       }
     });
   });
-  
+
   // Newsletter form submission (prevent default for demo)
   const newsletterForm = document.querySelector('.newsletter-form');
   if (newsletterForm) {
@@ -77,38 +77,38 @@ document.getElementById("hamburger").addEventListener("click", () => {
       }
     });
   }
-  
+
   // Add active class to current page in navigation
   document.addEventListener("DOMContentLoaded", function() {
     const currentPage = window.location.pathname.split("/").pop();
     const navLinks = document.querySelectorAll(".nav-links a");
-    
+
     navLinks.forEach(link => {
       const linkPage = link.getAttribute("href");
-      if (linkPage === currentPage || 
+      if (linkPage === currentPage ||
          (currentPage === "" && linkPage === "index.html") ||
          (currentPage === "/" && linkPage === "index.html")) {
         link.classList.add("active");
       }
     });
   });
-  
+
   // Reveal animations on scroll
   document.addEventListener("DOMContentLoaded", function() {
     const revealElements = document.querySelectorAll('.fade-in');
-    
+
     function revealOnScroll() {
       for (let i = 0; i < revealElements.length; i++) {
         const windowHeight = window.innerHeight;
         const elementTop = revealElements[i].getBoundingClientRect().top;
         const elementVisible = 150;
-        
+
         if (elementTop < windowHeight - elementVisible) {
           revealElements[i].classList.add("active");
         }
       }
     }
-    
+
     window.addEventListener("scroll", revealOnScroll);
     revealOnScroll(); // Check on initial load
   });

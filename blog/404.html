@@ -20,40 +20,59 @@ layout: default
 
 <style>
   .error-page {
-    min-height: 70vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 2rem;
+    padding: 3rem 2rem;
+    background: linear-gradient(170deg, var(--beige) 0%, var(--light-gray) 100%);
   }
 
   .error-container {
+    text-align: center;
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
     max-width: 600px;
+    width: 100%;
+    transition: var(--transition);
   }
 
   .error-icon {
-    font-size: 5rem;
+    font-size: 4.5rem;
     color: var(--accent);
     margin-bottom: 1rem;
     animation: float 6s ease-in-out infinite;
   }
 
   .error-page h1 {
-    font-size: 6rem;
-    line-height: 1;
-    margin-bottom: 0;
-    color: var(--accent);
+    font-size: 5rem;
+    color: var(--accent-dark);
+    margin-bottom: 0.5rem;
   }
 
   .error-page h2 {
-    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    color: var(--dark);
+    margin-bottom: 1rem;
+  }
+
+  .error-page p {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
   }
 
   .error-actions {
-    margin-top: 2rem;
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
     justify-content: center;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
   }
 </style>
