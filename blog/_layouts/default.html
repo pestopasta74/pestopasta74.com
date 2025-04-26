@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% if page.title %}{{ page.title }} | {% endif %}pestopasta74</title>
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}" />
+  <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">pestopasta74</div>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="{{ '/' | relative_url }}"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}" class="active"><i class="fas fa-rss"></i> Blog</a></li>
+        <li><a href="{{ '/projects.html' | relative_url }}"><i class="fas fa-code"></i> Projects</a></li>
+        <li><a href="{{ '/socials.html' | relative_url }}"><i class="fas fa-share-alt"></i> Socials</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>pestopasta74</h3>
+        <p>Physics. Code. Aesthetic chaos.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+          <li><a href="{{ '/projects.html' | relative_url }}">Projects</a></li>
+          <li><a href="{{ '/socials.html' | relative_url }}">Socials</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Connect</h3>
+        <div class="social-icons">
+          <a href="https://github.com/pestopasta74" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://instagram.com/pestopasta74" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@pestopasta74" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="mailto:pestopasta74@icloud.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 pestopasta74. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="{{ '/script.js' | relative_url }}"></script>
+</body>
+</html>
