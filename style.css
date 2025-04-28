@@ -484,6 +484,21 @@
     color: white;
   }
 
+  .snapchat .social-icon {
+    background: #fffc00;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .snapchat .social-icon img {
+    width: 80%;
+    height: auto;
+    border-radius: 50%;
+  }
+
   .github .social-icon {
     background: #333;
   }
@@ -498,6 +513,11 @@
 
   .tiktok .social-icon, .tiktok-alt .social-icon {
     background: #000000;
+  }
+
+
+  .linkedin .social-icon {
+    background: #0077b5;
   }
 
   .email .social-icon {
